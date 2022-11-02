@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
-ssh -i key.txt ubuntu@3.92.32.198
+# A script to log into my server using ssh
+ssh -i ~/.ssh/school ubuntu@3.92.32.198
