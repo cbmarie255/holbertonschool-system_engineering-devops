@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+ssh -i key.txt ubuntu@3.92.32.198
