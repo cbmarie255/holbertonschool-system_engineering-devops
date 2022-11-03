@@ -2,5 +2,6 @@
 # Script to install nginx and send a GET request using curl
 sudo apt-get update
 sudo apt-get install nginx
-sudo echo "Hello World\n" | sudo tee /usr/share/nginx/html/index.html
+sudo ufw allow 'Nginx HTTP'
 sudo service nginx start
+sudo echo "Hello World" > /usr/share/nginx/html/index.html
