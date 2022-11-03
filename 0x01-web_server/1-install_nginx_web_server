@@ -3,5 +3,5 @@
 sudo apt-get update
 sudo apt-get install nginx
 sudo ufw allow 'Nginx HTTP'
-sudo service nginx start
+sudo /etc/init.d/nginx restart
 sudo echo "Hello World" > /usr/share/nginx/html/index.html
