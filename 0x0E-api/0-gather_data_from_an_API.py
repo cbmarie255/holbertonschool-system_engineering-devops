@@ -18,7 +18,7 @@ if __name__ == "__main__":
     name = company_profile[0].get('name')
 
     # Grab the todo list!
-    list_url = API_URL + 'todos?users?Id{}='.format(employee_id)
+    list_url = API_URL + 'todos/?userId={}'.format(employee_id)
     resonse_for_todos = requests.get(list_url)
     to_do_list = resonse_for_todos.text
     tasks = json.loads(to_do_list)
@@ -33,5 +33,5 @@ if __name__ == "__main__":
     prompt_1 = "Employee {} is done with ".format(name)
     prompt_2 = "tasks({}/{}):".format(completed_tasks_count, len(tasks))
     print(prompt_1 + prompt_2)
-    for task in completed_tasks:
-        print("\t {}".format(task.get('title')))
+    for to_do in completed_tasks:
+        print("\t {}".format(to_do.get('title')))
