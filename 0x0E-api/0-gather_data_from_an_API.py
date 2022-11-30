@@ -11,11 +11,10 @@ if __name__ == "__main__":
     API_URL = 'https://jsonplaceholder.typicode.com/'
     # Grab the employee!
     employee_id = argv[1]
-    url = API_URL + 'users?id{}='.format(employee_id)
+    url = API_URL + 'users/{}'.format(employee_id)
     response_for_user = requests.get(url)
-    employee_data = response_for_user.text
-    company_profile = json.loads(employee_data)
-    name = company_profile[0].get('name')
+    company_profile = json.loads(response_for_user.text)
+    name = company_profile['name']
 
     # Grab the todo list!
     list_url = API_URL + 'todos/?userId={}'.format(employee_id)
