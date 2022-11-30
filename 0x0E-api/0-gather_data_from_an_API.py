@@ -2,10 +2,9 @@
 """
     Gathering data from an API.
 """
-from sys import argv
 import json
 import requests
-
+from sys import argv
 
 API_URL = 'https://jsonplaceholder.typicode.com/'
 # Grab the employee!
