@@ -23,7 +23,7 @@ if __name__ == "__main__":
     tasks = json.loads(to_do_list)
     csv_format = ""
     for person in tasks:
-        csv_format += '"{}","{}","{}","{}"'.format(
+        csv_format += '"{}","{}","{}","{}"\n'.format(
                 employee_id,
                 username,
                 person['completed'],
